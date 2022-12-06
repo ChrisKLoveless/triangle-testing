@@ -21,5 +21,22 @@ namespace Triangle
         {
             return AllSidesEqual() == false && (sideA == sideB || sideA == sideC || sideB == sideC);
         }
+
+        public bool NoSidesEqual()
+        {
+            return sideA != sideB && sideB != sideC && sideC != sideA;
+        }
+
+        public bool IsTriangle()
+        {
+            if (sideA + sideB <= sideC || sideB + sideC <= sideA || sideA + sideC <= sideB)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

@@ -34,5 +34,26 @@ namespace Triangle.TestTools
             Tri test = new Tri(1, 1, 1);
             Assert.AreEqual(false, test.TwoEqual());
         }
+
+				[TestMethod]
+        public void NoSidesEqual_CheckIfNoSidesAreEqual_False()
+        {
+            Tri test = new Tri(1, 2, 1);
+            Assert.AreEqual(false, test.NoSidesEqual());
+        }
+
+				[TestMethod]
+        public void IsTriangle_CheckIfItIsATriangle_False()
+        {
+            Tri test = new Tri(1, 10, 12);
+            Assert.AreEqual(false, test.IsTriangle());
+        }
+
+				[TestMethod]
+        public void IsTriangle_CheckIfItIsATriangle_True()
+        {
+            Tri test = new Tri(7, 10, 5);
+            Assert.AreEqual(true, test.IsTriangle());
+        }
     }
 }
